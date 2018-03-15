@@ -1,5 +1,5 @@
 import os,time,datetime
-
+import device
 def collect_logs():
 	mydir = os.path.join(os.getcwd(), datetime.datetime.now().strftime('call_audio_%Y-%m-%d_%H-%M-%S'))
 	os.makedirs(mydir)
@@ -26,7 +26,7 @@ def iter_status(iterations,div):
                 play=play_audio() 
                 print i+1
                 
-div = "ZX1D64GJW6"
+div = device.main()
 num = "+919000137251"
 iterations=3
 iter_status(iterations,div)
